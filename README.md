@@ -21,11 +21,22 @@ RandomInsult(X [integer]) will return
 "You {X [ADJ]s} [NOUN]!"
 ```
 
+### Errors
+If something bad happens, the code will return
+```JS
+`The insult was not generated because of the following error: ${ERROR}
+If you want to help prevent this from happening again, please contact Nightmarlin or Strideynet at ${DiscordServerLink}`
+```
+Where ERROR is the error details and DiscordServerLink is the current most applicable link.
+
 ## Credits
-> Nightmarlin
+> "I'd just like to point out that I have written this twice now in two different languages. Maybe I should ask for money next time..."
+>> -Nightmarlin
 
 
-> Strideynet
+> "No I'm going to bed now you can't have the MHOC Discord link"
+>> -Strideynet
 
 
-> https://www.nosweatshakespeare.com/resources/shakespeare-insults/
+> "We provided the basis for a whole host of beautiful insults. You're welcome"
+>> -https://www.nosweatshakespeare.com/resources/shakespeare-insults/

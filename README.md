@@ -20,6 +20,10 @@ RandomInsult(X [integer]) will return
 ```JS
 "You {X [ADJ]s} [NOUN]!"
 ```
+> RandomInsult(0) returns
+> ```JS
+"Your mother!"
+```
 
 ### Errors
 If something bad happens, the code will return

@@ -20,8 +20,8 @@ RandomInsult(X [integer]) will return
 ```JS
 "You {X [ADJ]s} [NOUN]!"
 ```
-> RandomInsult(0) returns
-> ```JS
+RandomInsult(0) returns
+```JS
 "Your mother!"
 ```
 

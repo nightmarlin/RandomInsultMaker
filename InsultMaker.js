@@ -12,7 +12,7 @@ function RandomInsult (Numbers) {
       Numbers *= -1
       Numbers = Numbers.ceil()
     } else if (Numbers === 0) {
-      Numbers = 2
+      return `Your mother!`
     } else {
       Numbers = Numbers.ceil()
     }
@@ -24,12 +24,12 @@ function RandomInsult (Numbers) {
       //
       while (RepeatedCheck === false) {
         //
-        var InsultNumber = Math.random() * (InsultSet.Adjectives.length - 1)
-        var InsultAdjective = InsultSet.Adjectives1[InsultNumber]
+        var InsultNumber = Math.random() * (InsultSet.Romeo.Adjectives.length - 1)
+        var InsultAdjective = InsultSet.Romeo.Adjectives[InsultNumber]
         //
         if (InsultAdjective === LastAdj) {
-          InsultNumber = Math.random() * (InsultSet.Adjectives.length - 1)
-          InsultAdjective = InsultSet.Adjectives1[InsultNumber]
+          InsultNumber = Math.random() * (InsultSet.Romeo.Adjectives.length - 1)
+          InsultAdjective = InsultSet.Romeo.Adjectives[InsultNumber]
         }
         RepeatedCheck = true
       }
@@ -37,8 +37,8 @@ function RandomInsult (Numbers) {
       Insult += InsultAdjective + ' '
     }
     //
-    InsultNumber = Math.random() * (InsultSet.Adjectives.length - 1)
-    var InsultNoun = InsultSet.Nouns[InsultNumber]
+    InsultNumber = Math.random() * (InsultSet.Romeo.Adjectives.length - 1)
+    var InsultNoun = InsultSet.Romeo.Nouns[InsultNumber]
     Insult += InsultNoun + '!'
     return Insult
   } catch (e) {

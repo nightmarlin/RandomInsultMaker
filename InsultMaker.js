@@ -1,8 +1,7 @@
-// Generates a random insult based on the contents of the InsultPt1 and InsultPt2 files
+// Generates a random insult based on the contents of the Insults file
 const InsultSet = require('Insults.JSON')
-const HelpLink = `discord.gg/j9Z3Qc7`// FIRAbot test server because stridey didn't give me the MHOC one
-
 function RandomInsult (Numbers) {
+  const HelpLink = `discord.gg/j9Z3Qc7`// FIRAbot test server because stridey didn't give me the MHOC one
   try {
     if (Numbers === undefined) {
       Numbers = 2
@@ -14,7 +13,7 @@ function RandomInsult (Numbers) {
     } else if (Numbers === 0) {
       return `Your mother!`
     } else {
-      Numbers = Numbers.ceil()
+      Numbers = Math.ceil(Numbers)
     }
     var Insult = 'You '
     //
@@ -41,19 +40,21 @@ function RandomInsult (Numbers) {
     var InsultNoun = InsultSet.Romeo.Nouns[InsultNumber]
     Insult += InsultNoun + '!'
     return Insult
-  } catch (e) {
-    var ErrorMsg = `The insult was not generated because of the following error: ${e}
+  } catch (err) {
+    var ErrorMsg = `The insult was not generated because of the following error: ${err}
     If you want to help prevent this from happening again, please contact Nightmarlin or Strideynet at ${HelpLink}`
     return ErrorMsg
   }
 }
 
 module.exports = RandomInsult
-// © Nightmarlin 12.10.2017
 
-// Some insult credits to:
-// -> https://www.nosweatshakespeare.com/resources/shakespeare-insults/
+/*
+© Nightmarlin 12.10.2017
 
-// Designed by Nightmarlin for Strideynet
+Some insult credits to:
+ -> https://www.nosweatshakespeare.com/resources/shakespeare-insults/
 
-// Part of the Nightmarlin collective
+Designed by Nightmarlin for Strideynet
+Part of the Nightmarlin collective
+*/
